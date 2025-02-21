@@ -1,0 +1,43 @@
+.admin-complaints-container {
+  width: 85%;
+  margin: 30px auto;
+  text-align: left;
+  font-family: 'Tahoma', sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.admin-complaints-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-complaints-container li {
+  background-color: #ffffff;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #d1c4e9;
+  transition: all 0.3s ease;
+}
+
+.admin-complaints-container li:hover {
+  border-color: #9a78c1;
+  transform: translateY(-5px);
+}
+
+.admin-complaints-container button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-complaints-container button:hover {
+  background-color: #4a148c;
+}

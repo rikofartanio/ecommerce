@@ -1,0 +1,114 @@
+.item {
+    width: 220px;
+    background: linear-gradient(180deg, #fefefe, #02ffd9); /* Gradasi warna seperti contoh */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item p {
+    margin: 6px 0px;
+    color: #374151;
+}
+
+.item-prices {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: rgba(55, 65, 81, 0.7);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(180deg, #58ffe9, #00ffd5); /* Warna berubah saat hover */
+}
+
+/* Model Tambahan */
+.item-rounded {
+    border-radius: 50%;
+    padding: 20px;
+    background: linear-gradient(180deg, #23fff8, #3bb2b8);
+}
+
+.item-shadow {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item-border {
+    border: 2px solid white;
+    padding: 10px;
+    background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+}
+
+.item-glow {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(180deg, #a18cd1, #fbc2eb);
+}
+
+/* Responsive Design */
+@media(max-width:1280px){
+    .item{
+        width: 220px;
+        font-size: 14px;
+    }
+    .item img{
+        width: 220px;
+    }
+    .item-price-old{
+        font-size: 14px;
+    }
+}
+@media(max-width:1040px){
+    .item{
+        width: 170px;
+        font-size: 13px;
+    }
+    .item img{
+        width: 170px;
+    }
+    .item-price-old{
+        font-size: 13px;
+    }
+}
+@media(max-width:800px){
+    .item{
+        width: 120px;
+        font-size: 12px;
+    }
+    .item img{
+        width: 120px;
+    }
+    .item-price-old{
+        font-size: 12px;
+    }
+}
+@media(max-width:500px){
+    .item{
+        width: 160px;
+    }
+    .item img{
+        width: 160px;
+    }
+}

@@ -1,0 +1,82 @@
+/* Style untuk wrapper utama */
+.new-collections {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 100px;
+}
+
+/* Style untuk judul */
+.new-collections h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Garis pemisah */
+.new-collections hr {
+    width: 150px;
+    height: 4px;
+    background: #FF6B6B;
+    border: none;
+    margin: 10px auto 30px auto;
+}
+
+/* Container untuk item */
+.collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Style untuk setiap item */
+.item {
+    width: 220px;
+    max-width: 100%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsiveness untuk tablet */
+@media (max-width: 768px) {
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Fleksibel sesuai lebar */
+        gap: 15px;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .new-collections h1 {
+        font-size: 30px;
+    }
+}
+
+/* Responsiveness untuk ponsel kecil */
+@media (max-width: 480px) {
+    .collections {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Lebih kecil di ponsel */
+    }
+
+    .new-collections h1 {
+        font-size: 26px;
+    }
+
+    .item {
+        padding: 12px;
+    }
+}

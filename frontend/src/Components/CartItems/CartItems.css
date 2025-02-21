@@ -1,0 +1,176 @@
+.cartitems {
+    margin: 50px 20px; /* Mengurangi margin untuk layar kecil */
+}
+.cartitems hr {
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cartitems-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+.carticon-product-icon {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+.cartitems-remove-icon {
+    width: 15px;
+    cursor: pointer;
+}
+.cartitems-quantity {
+    width: 64px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: transparent; /* Menghilangkan background oranye */
+    color: black; /* Mengubah warna teks menjadi hitam */
+    border: 1px solid #ccc; /* Menambahkan border agar tetap terlihat */
+}
+.cartitems-down {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+.cartitems-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    gap: 20px;
+}
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.cartitems-total button {
+    width: 100%;
+    max-width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cartitems-promocode p {
+    color: #555;
+}
+.cartitems-promobox {
+    width: 100%;
+    max-width: 504px;
+    margin-top: 15px;
+    padding-left: 20px;
+    background: #e0e0e0; /* Kembali ke abu-abu */
+    display: flex;
+    align-items: center;
+}
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 70%;
+    height: 50px;
+    color: black; /* Mengembalikan warna teks agar cocok dengan background abu-abu */
+}
+.cartitems-promobox button {
+    width: 30%;
+    height: 58px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cartitems-format-main,
+    .cartitems-format {
+        grid-template-columns: 1fr 2fr 1fr 1fr; /* Mengurangi jumlah kolom */
+    }
+
+    .cartitems-down {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartitems-total {
+        margin-right: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .cartitems-promobox {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cartitems-format-main,
+    .cartitems-format {
+        grid-template-columns: 1fr 2fr; /* Lebih sederhana */
+        font-size: 14px;
+    }
+
+    .cartitems {
+        margin: 20px;
+    }
+
+    .cartitems-down {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartitems-total {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartitems-total button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .cartitems-promobox {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .cartitems-promobox input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartitems-promobox button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

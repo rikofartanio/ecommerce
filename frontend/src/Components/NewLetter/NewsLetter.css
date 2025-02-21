@@ -1,0 +1,118 @@
+/* Wrapper utama */
+.newsletter {
+    width: 80%;
+    max-width: 900px;
+    padding: 40px 20px;
+    margin: 50px auto;
+    text-align: center;
+    background: linear-gradient(135deg, #b5c99a 0%, #f2e3bc 100%);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Judul */
+.newsletter h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Paragraf */
+.newsletter p {
+    font-size: 18px;
+    color: #3a4d39;
+    margin-bottom: 20px;
+}
+
+/* Formulir */
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Input */
+.newsletter input {
+    flex: 1;
+    min-width: 250px;
+    max-width: 450px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px; /* Biar mirip dengan desain */
+    outline: none;
+    background: white;
+    color: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol */
+.newsletter button {
+    padding: 14px 25px;
+    font-size: 16px;
+    background: #6a994e;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background: #3a5a40;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(58, 90, 64, 0.3);
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .newsletter {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .newsletter h1 {
+        font-size: 26px;
+    }
+}
+
+/* Responsif untuk ponsel kecil */
+@media (max-width: 480px) {
+    .newsletter {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .newsletter h1 {
+        font-size: 22px;
+    }
+
+    .newsletter p {
+        font-size: 15px;
+    }
+
+    .newsletter input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .newsletter button {
+        padding: 12px 18px;
+        font-size: 14px;
+        width: 100%;
+    }
+}

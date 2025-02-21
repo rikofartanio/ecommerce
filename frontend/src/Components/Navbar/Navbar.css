@@ -1,0 +1,241 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ffd700, #ff4500, #d2691e, #ffd700); /* Gradasi emas dan merah */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    animation: goldenShine 3s linear infinite, waveEffect 1.5s infinite ease-in-out;
+}
+
+/* Animasi gradasi emas */
+@keyframes goldenShine {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Animasi efek gelombang */
+@keyframes waveEffect {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Efek naik turun seperti gelombang */
+    }
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #ff41f9;
+}
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav-login-cart button {
+    width: 120px; /* Lebih kecil dari sebelumnya */
+    height: 45px; /* Lebih proporsional */
+    outline: none;
+    border: 2px solid #e74c3c;
+    border-radius: 30px; /* Masih berbentuk oval tapi lebih kecil */
+    color: #e74c3c;
+    font-size: 16px; /* Ukuran font diperkecil */
+    font-weight: 500;
+    background: rgba(231, 76, 60, 0.1); /* Transparansi dengan latar belakang merah */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-login-cart button:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+.nav-login-cart button:active {
+    transform: scale(0.95);
+}
+
+
+.nav-login-cart button:hover {
+    background: #e74c3c;
+    color: white;
+    border: 2px solid #c0392b; /* Efek hover dengan border merah lebih gelap */
+}
+
+.nav-login-cart button:active {
+    transform: scale(0.95); /* Efek klik dengan pengecilan */
+}
+
+.nav-login-cart button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.6); /* Fokus dengan highlight merah */
+}
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 50%;
+    font-size: 14px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    animation: pulsing 1s infinite; /* Efek berkedip */
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.nav-dropdown{
+    display: none;
+}
+
+@media(max-width:1280px){
+    .navbar{
+        padding: 12px 50px;
+    }
+    .nav-logo img{
+        width: 40px;
+    }
+    .nav-logo p{
+        font-size: 25px;
+    }
+    .nav-menu{
+        gap:30px;
+        font-size: 16px;
+    }
+    .nav-login-cart{
+        gap: 30px;
+    }
+    .nav-login-cart button{
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .nav-cart-count{
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1024px){
+    .navbar{
+        padding: 12px 30px;
+    }
+    .nav-menu{
+        gap: 25px;
+        font-size: 14-x;
+    }
+    .nav-login-cart button{
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .nav-login-cart img{
+        width: 30px;
+    }
+    .nav-cart-count{
+        width: 18px;
+        height: 18px;
+    }
+}
+@media(max-width:800px){
+    .navbar{
+        padding: 10px 0px;
+    }
+    .nav-dropdown{
+        display: block;
+        width: 30px;
+        rotate: -90deg;
+        transition: 0.5s;
+    }
+    .nav-menu{
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        justify-content: center;
+        top: 50px;
+    }
+    .nav-menu-visible{
+        display: flex;
+    }
+    .nav-dropdown.open{
+        transform: rotate(90deg);
+    }
+}
+@media(max-width:500px){
+    .navbar{
+        width: 8px 0px;
+        gap: 0;
+    }
+    .nav-logo{
+        transform: scale(0.8);
+    }
+    .nav-menu{
+        height: 70px;
+        top: 50px;
+    }
+    .nav-login-cart{
+        transform: scale(0.8);
+    }
+}

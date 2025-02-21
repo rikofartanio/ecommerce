@@ -1,0 +1,49 @@
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffefd5;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 2px 2px #f4a261;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    font-size: 18px;
+    color: #2a9d8f;
+    margin-bottom: 30px;
+  }
+  
+  .section {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #e9c46a;
+  }
+  
+  .subheading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f4a261;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    color: #264653;
+  }
+  
+  .list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f4a261;
+    border-radius: 8px;
+  }
+  

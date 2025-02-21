@@ -1,0 +1,29 @@
+.breadcrum {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 60px 100px;
+    text-transform: capitalize;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .breadcrum {
+        font-size: 14px;
+        margin: 40px 50px;
+        gap: 6px;
+    }
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 480px) {
+    .breadcrum {
+        font-size: 12px;
+        margin: 20px 20px;
+        gap: 4px;
+        flex-wrap: wrap; /* Agar tidak terlalu lebar */
+    }
+}

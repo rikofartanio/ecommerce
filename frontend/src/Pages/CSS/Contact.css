@@ -1,0 +1,29 @@
+/* CSS/Contact.css */
+.contact-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .contact-container h1 {
+    font-size: 26px;
+  }
+  
+  .contact-container p {
+    font-size: 18px;
+  }
+  
+  .contact-container a {
+    color: #ffeb3b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .contact-container a:hover {
+    text-decoration: underline;
+  }
+  

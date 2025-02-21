@@ -1,0 +1,56 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom untuk layar besar */
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Medium screen (tablet) */
+@media (max-width: 1024px) {
+    .popular-item {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk layar sedang */
+    }
+}
+
+/* Small screen (mobile) */
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 36px;
+    }
+    
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar kecil */
+        gap: 20px;
+    }
+}
+
+/* Extra small screen */
+@media (max-width: 480px) {
+    .popular-item {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolom untuk layar sangat kecil */
+    }
+}
