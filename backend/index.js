@@ -14,17 +14,6 @@ const port = 4000;
 
 app.use(express.json());
 
-app.get('http://shopmart10.shop/api/products', async (req, res) => {
-  try {
-    let products = await Product.find({});
-    console.log("Fetched all products");
-    res.json(products);
-  } catch (error) {
-    console.error("Error fetching products:", error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
-});
-
 app.use(cors({
   origin: ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop"], // Tambahkan frontend yang sesuai
   methods: ["GET", "POST", "PUT", "DELETE"],
