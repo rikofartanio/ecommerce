@@ -14,7 +14,7 @@ const port = 4000;
 
 app.use(express.json());
 
-app.get('/api/products', async (req, res) => {
+app.get('http://shopmart10.shop/api/products', async (req, res) => {
   try {
     let products = await Product.find({});
     console.log("Fetched all products");
