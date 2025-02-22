@@ -17,7 +17,7 @@ const ShopContextProvider = (props) => {
     // Mengambil data produk dan cart dari server
     useEffect(() => {
         // Fetching produk
-        fetch('https://shopmart.shop/api/allproducts')
+        fetch('https://shopmart10.shop/api/allproducts')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -30,7 +30,7 @@ const ShopContextProvider = (props) => {
         // Mengambil cart dari localStorage atau server
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://shopmart.shop/api/getcart', {
+            fetch('https://shopmart10.shop/api/getcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -67,7 +67,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://shopmart.shop/api/addtocart', {
+            fetch('https://shopmart10.shop/api/addtocart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -93,7 +93,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://shopmart.shop/api/removefromcart', {
+            fetch('https://shopmart10.shop/api/removefromcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
