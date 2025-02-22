@@ -30,7 +30,7 @@ const ShopContextProvider = (props) => {
         // Mengambil cart dari localStorage atau server
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://api.shopmart10.shop/api/getcart', {
+            fetch('https://api.shopmart10.shop/getcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -67,7 +67,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://api.shopmart10.shop/api/addtocart', {
+            fetch('https://api.shopmart10.shop/addtocart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -93,7 +93,7 @@ const ShopContextProvider = (props) => {
 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('https://api.shopmart10.shop/api/removefromcart', {
+            fetch('https://api.shopmart10.shop/removefromcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
