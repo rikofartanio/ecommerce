@@ -7,7 +7,7 @@ const ListProduct = () => {
     const[allproducts,setAllProducts]=  useState([]);
 
     const fetchInfo= async()=>{
-        await fetch('http://shopmart10.shop/allproducts')
+        await fetch('https://api.shopmart10.shop/allproducts')
         .then((res)=>res.json())
         .then((data)=>{setAllProducts(data)});
     }
