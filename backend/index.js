@@ -14,12 +14,24 @@ const port = 4000;
 
 app.use(express.json());
 
-app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop"], // Tambahkan frontend yang sesuai
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true // Jika menggunakan cookie atau authentication
-}));
+//app.use(cors({
+//origin: ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop", "https://admin.shopmart10.shop"], // Tambahkan frontend yang sesuai
+ // methods: ["GET", "POST", "PUT", "DELETE"],
+  //credentials: true // Jika menggunakan cookie atau authentication
+//}));
 
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop"].includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
 // Pastikan folder upload/images ada
 const uploadDir = './upload/images';
