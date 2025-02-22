@@ -20,16 +20,9 @@ app.use(express.json());
   //credentials: true // Jika menggunakan cookie atau authentication
 //}));
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
-  "https://shopmart10.shop",
-  "https://admin.shopmart10.shop"
-];
-
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigin.includes(origin)) {
+    if (!origin || ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop"].includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
