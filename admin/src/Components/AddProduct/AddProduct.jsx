@@ -33,7 +33,7 @@ const AddProduct = () => {
         formData.append("description", productDetails.description);
         formData.append("image", image);
 
-        await fetch('http://localhost:4000/upload', {
+        await fetch('http://shopmart10.shop/upload', {
             method: 'POST',
             body: formData,
         })
@@ -44,7 +44,7 @@ const AddProduct = () => {
             let product = { ...productDetails, image: responseData.image_url };
             console.log("Final Product Data:", product);
 
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('http://shopmart10.shop/addproduct', {
                 method: 'POST',
                 headers: { 
                     Accept:'application/json',
