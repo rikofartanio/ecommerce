@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop"].includes(origin)) {
+    if (!origin || ["http://localhost:5173", "http://localhost:3000", "https://shopmart10.shop", "https://admin.shopmart10.shop"].includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
