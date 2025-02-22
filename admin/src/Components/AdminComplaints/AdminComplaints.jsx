@@ -12,7 +12,7 @@ const Complaints = () => {
 
   const fetchComplaints = async () => {
     try {
-      const response = await fetch("http://localhost:4000/allcomplaints");
+      const response = await fetch("http://shopmart10.shop/allcomplaints");
       const data = await response.json();
       setComplaints(data);
     } catch (error) {
@@ -22,10 +22,10 @@ const Complaints = () => {
 
   
   const deleteComplaint = async (id) => {
-    console.log(`Request URL: http://localhost:4000/deletecomplaint/${id}`);
+    console.log(`Request URL: http://shopmart10.shop/deletecomplaint/${id}`);
 
     try {
-      const response = await fetch(`http://localhost:4000/deletecomplaint/${id}`, {
+      const response = await fetch(`http://shopmart10.shop/deletecomplaint/${id}`, {
         
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
