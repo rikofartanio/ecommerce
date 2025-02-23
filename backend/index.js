@@ -15,8 +15,9 @@ const port = 4000;
 app.use(express.json());
 
 app.use(cors({
-origin: ["http://localhost:5173", "http://localhost:3000", "https://api.shopmart10.shop", "https://admin.shopmart10.shop",] // Tambahkan frontend yang sesuai
+origin: ["https://shopmart10.shop", "https://admin.shopmart10.shop",] // Tambahkan frontend yang sesuai
  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true // Jika menggunakan cookie atau authentication
 }));
 
