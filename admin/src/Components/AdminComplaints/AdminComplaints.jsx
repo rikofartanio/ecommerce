@@ -12,7 +12,7 @@ const Complaints = () => {
 
   const fetchComplaints = async () => {
     try {
-      const response = await fetch("http://shopmart10.shop/allcomplaints");
+      const response = await fetch("https://api.shopmart10.shop/allcomplaints");
       const data = await response.json();
       setComplaints(data);
     } catch (error) {
@@ -22,10 +22,10 @@ const Complaints = () => {
 
   
   const deleteComplaint = async (id) => {
-    console.log(`Request URL: http://shopmart10.shop/deletecomplaint/${id}`);
+    console.log(`Request URL: https://api.shopmart10.shop/deletecomplaint/${id}`);
 
     try {
-      const response = await fetch(`http://shopmart10.shop/deletecomplaint/${id}`, {
+      const response = await fetch(`https://api.shopmart10.shop/deletecomplaint/${id}`, {
         
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
