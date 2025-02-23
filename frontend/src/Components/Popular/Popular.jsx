@@ -7,7 +7,7 @@ const Popular = () => {
   const [popularProducts,setPopularProducts] = useState([]);
 
   useEffect(()=>{
-    fetch('https://api.shopmart10.shop/popularinwomen'{ mode: 'cors' })
+    fetch('https://api.shopmart10.shop/popularinwomen')
     .then((response)=>response.json())
     .then((data)=>setPopularProducts(data));
   },[])
