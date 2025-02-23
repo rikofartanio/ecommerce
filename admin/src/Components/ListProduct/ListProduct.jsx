@@ -17,7 +17,7 @@ const ListProduct = () => {
     },[])
 
     const remove_product = async (id)=>{
-        await fetch('http://shopmart10.shop/removeproduct',{
+        await fetch('https://api.shopmart10.shop/removeproduct',{
             method:'POST',
             headers:{
                 Accept:'application/json',
